@@ -2,9 +2,133 @@
 <html>
 <head>
 <title>Title yang ingin di tampilkan</title>
+<style>
+
+body {
+    background-color: purple;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  
+  h2 {
+    color: white;
+    text-align: center;
+    font-family: verdana;
+    font-size: 20px;
+  }
+</style>
+</head>
+<body>
+  <style type="text/css"> 
+    /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #FBF7F7;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  color: white;
+  font-size: 20px;
+}
+</style>
 </head>
 <body>
 
-    
+<h1>RISTI MELYANA</h1>
+    <hr size="2px">
+    <h2> Web Developer</h2> 
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'profile')">Profile</button>
+  <button class="tablinks" onclick="openCity(event, 'myskill')">My Skill</button>
+  <button class="tablinks" onclick="openCity(event, 'work')">Work Process</button>
+  <button class="tablinks" onclick="openCity(event, 'contact')">Contact Me</button>
+</div>
+
+<div id="profile" class="tabcontent">
+  <h1 align="center">Profile</h1>
+  <p align="center" class="centered"><img src="resti.jpg" alt="foto-profile" width="300" height="250"></p>
+  <p>Nama saya Risti Melyana saya anak kedua dari dua bersaudara nama kakak saya Bayu Nur Suhada, Instagram saya risti_melya jangan lupa follow ya terima kasih :). Dan saya berkeinginan untuk menjadi orang yang berguna untuk keluarga serta ingin menjadi web developer profesional dan handal. </p>
+</div>
+
+<div id="myskill" class="tabcontent">
+  <h1>My Skill</h1>
+  <ul style="list-style-type:disc;">
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JAVASCRIPT</li>
+  <li>NODE JS</li>
+  <li>VUEJS</li>
+  <li>NUXJS</li>
+  <li>PROGRESSIVE WEB APPLICATION</li>
+  <li>PUSH NOTIFICATION</li>
+  <li>WEB SERVICES</li>
+</ul> 
+</div>
+
+<div id="work" class="tabcontent">
+  <h1>Work Process</h1>
+  <ol>
+  <li>CONCEPT</li>
+  <li>SKETCH</li>
+  <li>DESIGN</li>
+  <li>CODE</li>
+  <li>TEST</li>
+  <li>PUBLISH</li>
+</ol>  
+</div>
+
+<div id="contact" class="tabcontent">
+  <h1 align="center"><a href="contact.html">Contact Me</a></h1>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+  </style>
+
 </body>
 </html>
